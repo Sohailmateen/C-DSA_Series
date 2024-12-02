@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int binaryToDecimal(int binNum){
+    int ans = 0, pow = 1;
+
+    while (binNum > 0){
+        int rem = binNum%10;
+        ans += pow*rem;
+
+        binNum /= 10;
+        pow *=2;
+
+    }
+    return ans;
+}
+
+int main(){
+    cout << binaryToDecimal(1011) << endl;
+    return 0;
+}
+
